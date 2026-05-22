@@ -107,6 +107,7 @@
     .reveal-stagger.active > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay: 0.31s; }
     .reveal-stagger.active > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay: 0.44s; }
     .reveal-stagger.active > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay: 0.57s; }
+    .reveal-stagger.active > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay: 0.70s; }
 
     /* Fade in from left */
     .reveal-left {
@@ -160,6 +161,7 @@
         100% { transform: translateX(-50%); }
     }
     .ticker-track { animation: ticker 18s linear infinite; }
+    .ticker-track:hover { animation-play-state: paused; }
     @media (min-width: 768px) { .ticker-track { animation: none; } }
 
     /* ─── Section number accent ─── */
