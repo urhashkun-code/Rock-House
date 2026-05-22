@@ -86,9 +86,6 @@
 
     /* Hamburger */
     .ham-line{transition:all .35s cubic-bezier(.4,0,.2,1);transform-origin:center;}
-    #ham-btn.open .ham-line:nth-child(1){transform:rotate(45deg) translate(5px,6px);}
-    #ham-btn.open .ham-line:nth-child(2){opacity:0;transform:scaleX(0);}
-    #ham-btn.open .ham-line:nth-child(3){transform:rotate(-45deg) translate(5px,-6px);}
 
     /* Mobile nav link slide-in */
     .mob-nav-link{opacity:0;transform:translateX(30px);transition:opacity .4s ease,transform .4s ease,color .2s ease;}
@@ -231,10 +228,10 @@
 <body class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 
 <!-- ── Mobile Nav Overlay ── -->
-<div id="nav-overlay-mob" class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-40" onclick="closeMobNav()"></div>
+<div id="nav-overlay-mob" class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-[55]" onclick="closeMobNav()"></div>
 <!-- ── Mobile Nav Drawer ── -->
-<aside id="mobile-nav" class="fixed top-0 right-0 h-full w-72 bg-primary-container z-50 flex flex-col pt-24 pb-12 px-8 shadow-2xl">
-  <button onclick="closeMobNav()" class="absolute top-5 right-5 text-white/70 hover:text-white transition-colors">
+<aside id="mobile-nav" class="fixed top-0 right-0 h-full w-72 bg-primary-container z-[60] flex flex-col pt-24 pb-12 px-8 shadow-2xl">
+  <button onclick="closeMobNav()" class="absolute top-5 right-5 text-white/70 hover:text-white transition-colors z-[61]">
     <span class="material-symbols-outlined text-3xl">close</span>
   </button>
   <nav class="flex flex-col gap-8 mt-4">
@@ -250,10 +247,10 @@
 </aside>
 
 <!-- TopAppBar -->
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out" id="main-nav">
+<header class="fixed top-0 left-0 w-full z-40 transition-all duration-500 ease-in-out" id="main-nav">
 <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent pointer-events-none transition-opacity duration-500" id="nav-overlay"></div>
 <nav class="relative flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-5">
-<div class="font-headline-sm text-headline-sm tracking-tight text-white drop-shadow-md">Rock House Resort Mangatta</div>
+<div class="font-label-caps text-label-caps tracking-widest text-white drop-shadow-md uppercase" style="font-size:13px;letter-spacing:0.08em;">Rock House Resort Mangatta</div>
 <div class="hidden md:flex items-center gap-12">
 <a class="font-label-caps text-label-caps text-white/90 hover:text-white transition-colors duration-300 no-underline drop-shadow-sm" href="/Rock-House/">Home</a>
 <a class="font-label-caps text-label-caps text-white/90 hover:text-white transition-colors duration-300 no-underline drop-shadow-sm" href="/Rock-House/villas/">Villas</a>
